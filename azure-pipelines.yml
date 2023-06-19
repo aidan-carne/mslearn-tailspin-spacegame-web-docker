@@ -88,6 +88,6 @@ variables:
     steps:
     - task: AzureWebAppContainer@1
       inputs:
-       appName: $(WebAppName)
+       appName: $(aidansapp)
        azureSubscription: 'Resource Manager - Tailspin - Space Game'
-       imageName: $(RegistryName)/$(webRepository):$(build.buildId)
+       imageName: $(aidanregistry.azurecr.io)/$(webRepository):$(build.buildId)
