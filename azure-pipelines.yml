@@ -6,7 +6,8 @@ variables:
   webRepository: 'web'
   tag: '$(Build.BuildId)'
 
-- stage: 'Build'
+stages:
+  - stage: 'Build'
   displayName: 'Build and push'
   jobs:  
   - job: 'Build'
@@ -24,6 +25,7 @@ variables:
         containerRegistry: 'Container Registry Connection'
         tags: |
           $(tag)
+
 
     variables:
       wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
